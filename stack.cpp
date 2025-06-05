@@ -43,3 +43,17 @@ public:
     {
         return top == NULL;
     }
+
+    // pop operation
+    void pop()
+    {
+        if (isEmpty())
+        {
+            cout << "Stack is empty." << endl;
+            return;
+        }
+        node *temp = top;
+        cout << "Popped value: " << top->data << endl;
+        top = top->next;
+        delete temp;
+    }
