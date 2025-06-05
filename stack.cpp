@@ -38,3 +38,8 @@ public:
         return value;
     }
 
+    // check if stack is empty
+    bool isEmpty()
+    {
+        return top == NULL;
+    }
