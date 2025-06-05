@@ -57,3 +57,22 @@ public:
         top = top->next;
         delete temp;
     }
+
+    // peek operation
+    void peek()
+    {
+        if (isEmpty())
+        {
+            cout << "List is Empty." << endl;
+            return;
+        }
+
+        node *current = top;
+        while (current != NULL)
+        {
+            cout << current->data << endl;
+            current = current->next;
+        }
+        cout << endl;
+    }
+};
