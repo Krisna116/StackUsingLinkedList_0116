@@ -26,3 +26,15 @@ public:
         top = NULL;
         // initialize the stack with a null top pointer
     }
+
+    // push operation: Insert an element onto the top of the stack
+    int push(int value)
+    {
+        node *newNode = new node();     // 1. allocate memory for the new node
+        newNode->data = value;          // 2. assign value
+        newNode->next = top;            // 3. link to current top
+        top = newNode;                  // 4. update top
+        cout << "Push value: " << value << endl;
+        return value;
+    }
+
